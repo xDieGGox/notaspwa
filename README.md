@@ -1,27 +1,30 @@
-# Repuesto
+# Proyecto PWA de notas
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
-## Development server
+Para poder implementar el actual proyecto primero haremos lo siguiente:
+## 1. Clonar el Repositorio:
+Abre tu terminal y ejecuta el siguiente comando para clonar el repositorio desde GitHub:
+git clone https://github.com/xDieGGox/notaspwa.git
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 2. Instalar Dependencias:
+Navega al directorio del proyecto recién clonado:
+npm install
 
-## Code scaffolding
+## 3. Configurar Firebase:
+Si aún no tienes una cuenta en Firebase, crea una en Firebase Console.
+Crea un nuevo proyecto en Firebase Console.
+Configura tu proyecto para usar Firebase Hosting y Firestore.
+Esto esta en la siguiente direccion: app/envoroments/enviroment.ts  , en este configuramos con las credenciales nuestras.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 4. Visualizamos la aplicación:
+ng serve --open
 
-## Build
+## 5. Ahora para poder desplegar en firebase la aplicacion hacemos lo siguiente:
+npm install -g firebase-tools
+Ejecuta 'firebase login' para iniciar sesión en tu cuenta de Firebase.
+Ejecuta 'firebase init' para inicializar tu proyecto Firebase y selecciona las opciones relevantes (Hosting y Firestore).
+Antes de hacer un deploy construimos la aplicacion con 'ng build'.
+Despliega la aplicación con 'firebase deploy'.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Con esto ya estaría implementado el proyecto
